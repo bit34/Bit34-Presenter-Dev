@@ -1,0 +1,3 @@
+[submodule "Assets/Libraries/Director"]
+	path = Assets/Libraries/Director
+	url = git@github.com:bit34/Bit34-Director.git
