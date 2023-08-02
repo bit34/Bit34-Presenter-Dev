@@ -11,14 +11,14 @@ namespace MyGame.Character.Context
 {
     public static class CharacterContextBindings
     {
-        public static void Initialize(InjectorContext injector, MediationBinder mediationBinder, SignalCommandBinder signalCommandBinder)
+        public static void AddBindings(InjectorContext injector, MediationBinder mediationBinder, SignalCommandBinder signalCommandBinder)
         {
             //  Model bindings
             injector.AddBinding<CharactersModel>()                      .ToType<CharactersModel>();
 
             //  View-Mediator bindings
-            mediationBinder.BindView<CharactersView>()                  .ToMediator<CharactersMediator>()       .As<ICharactersView>();
-            mediationBinder.BindView<CharacterDetailView>()             .ToMediator<CharacterDetailMediator>()  .As<ICharacterDetailView>();
+            mediationBinder.BindView<CharactersView>()                  .ToMediator<CharactersMediator>()           .As<ICharactersView>();
+            mediationBinder.BindView<CharacterOverlayView>()            .ToMediator<CharacterOverlayMediator>()     .As<ICharacterOverlayView>();
 
             //  Signal-Command bindings
             signalCommandBinder.BindSignal<SelectCharacterSignal>()     .ToCommand<SelectCharacterCommand>();

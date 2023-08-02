@@ -1,6 +1,6 @@
 namespace MyGame.Character.Views
 {
-    public interface ICharacterDetailView
+    public interface ICharacterOverlayView
     {
         //  METHODS
         void Initialize();

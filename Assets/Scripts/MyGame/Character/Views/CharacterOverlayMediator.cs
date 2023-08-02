@@ -1,16 +1,16 @@
-using Com.Bit34Games.Director.Mediation;
+using Com.Bit34Games.Presenter.Views;
 using MyGame.Character.Models;
 using MyGame.Character.Models.VO;
 using MyGame.Character.Signals;
 
 namespace MyGame.Character.Views
 {
-    public class CharacterDetailMediator : IMediator
+    public class CharacterOverlayMediator : OverlayMediator
     {
         //  MEMBERS
 #pragma warning disable 0649
         //      View
-        [Inject] private ICharacterDetailView _view;
+        [Inject] private ICharacterOverlayView _view;
         //      Models
         [Inject] private CharactersModel _charactersModel;
         //      Signals to listen
@@ -20,14 +20,14 @@ namespace MyGame.Character.Views
         //  METHODS
 #region MediatorBase implementation
     
-        public void OnRegister()
+        protected override void Initialize()
         {
             _view.Initialize();
             
             _characterSelectedSignal.AddListener(OnCharacterSelected);
         }
 
-        public void OnRemove()
+        protected override void Uninitialize()
         {
             _characterSelectedSignal.RemoveListener(OnCharacterSelected);
         }

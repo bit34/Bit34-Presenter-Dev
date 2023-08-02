@@ -1,10 +1,10 @@
 using UnityEngine;
-using Com.Bit34Games.Unity.Director;
+using Com.Bit34Games.Director.Unity;
 using MyGame.Ground.Views;
 
 namespace MyGame.Ground.Unity
 {
-    public class GroundView : MonoBehaviourView, IGroundView
+    public class GroundView : DirectorUnityView, IGroundView
     {
         //  MEMBERS
 #pragma warning disable 0649

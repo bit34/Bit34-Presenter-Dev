@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
-using Com.Bit34Games.Unity.Director;
 using MyGame.Character.Views;
+using Com.Bit34Games.Presenter.Unity;
 
 namespace MyGame.Character.Unity
 {
-    public class CharacterDetailView : MonoBehaviourView, ICharacterDetailView
+    public class CharacterOverlayView : BasePresenterView, 
+                                        ICharacterOverlayView
     {
         //  MEMBERS
 #pragma warning disable 0649

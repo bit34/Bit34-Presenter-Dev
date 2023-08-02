@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "com.bit34games.injector": "https://github.com/bit34/Bit34-Injector-UPM.git#v2.0.0",
+    "com.unity.nuget.newtonsoft-json": "3.0.1",
+    "com.bit34games.packagemanager": "https://github.com/bit34/Bit34-PackageManager-UPM.git",
     "com.unity.ads": "2.0.8",
     "com.unity.analytics": "3.2.3",
     "com.unity.collab-proxy": "1.2.15",
@@ -39,9 +40,9 @@
     "com.unity.modules.xr": "1.0.0"
   },
   "lock": {
-    "com.bit34games.injector": {
-      "revision": "v2.0.0",
-      "hash": "7a35e4b4eb3e2321413cfd11adc54a25b04c9266"
+    "com.bit34games.packagemanager": {
+      "revision": "HEAD",
+      "hash": "dd448812f2ccd10c59f36eaa8781ff76df0e659f"
     }
   }
 }

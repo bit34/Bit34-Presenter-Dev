@@ -1,3 +1,51 @@
+/Assets/Libraries/
+/Assets/Libraries.meta
+/Assets/Bit34/
+/Assets/Bit34.meta
+
+# ===============
+# Unity generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# =====================================
+# Unity3D generated meta files
+*.pidb.meta
+
+
+# =====================================
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
+
+
+# =====================================
+# Visual Studio / MonoDevelop generated
+[Ee]xported[Oo]bj/
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# =====================================
 # OS generated
 .DS_Store*
 ._*
@@ -5,22 +53,3 @@
 .Trashes
 ehthumbs.db
 [Tt]humbs.db
-
-# Visual Studio Code
-.vscode
-
-# User-specific files
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# Visual Studio 2015
-.vs/
-
-# Unity generated
-[Tt]emp/
-[Oo]bj/
-[Bb]uild
-[Bb]uilds/
-[Ll]ibrary/

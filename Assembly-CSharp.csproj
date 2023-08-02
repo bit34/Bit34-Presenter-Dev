@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{02899009-66EC-B87C-FEC0-200EBCB1FC15}</ProjectGuid>
+    <ProjectGuid>{57C3D632-CC47-D188-2098-97AE8AF9D62B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,26 +53,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Error\DirectorErrorType.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Error\DirectorException.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\IDirectorContext.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Mediation\IMediationBinding.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Mediation\IMediationOptions.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Mediation\IMediator.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Mediation\IView.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Mediation\MediationBinder.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Mediation\MediationBinding.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Mediation\ViewInjectionOverrider.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Signaling\ICommand.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Signaling\ISignal.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Signaling\ISignalCommandBinding.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Signaling\ISignalCommandBindingInternal.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Signaling\Signal.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Signaling\SignalCommandBinder.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Signaling\SignalCommandBinding.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Director\Signaling\SignalListener.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Unity\Director\DirectorContext.cs" />
-     <Compile Include="Assets\Libraries\Director\Scripts\Com\Bit34Games\Unity\Director\MonoBehaviourView.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Director\Unity\DirectorUnityContext.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Director\Unity\DirectorUnityView.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\Commands\PresenterCommands.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\Context\PresenterContextBindings.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\Models\IReadOnlyPresenterModel.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\Models\PresenterModel.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\Signals\PresenterSignals.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\Utilities\IPresenterSceneManager.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\Utilities\PresenterOperations.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\Views\BasePresenterMediator.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\Views\OverlayMediator.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\Views\ScreenMediator.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Presenter\VOs\ScreenVO.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Unity\BasePresenterView.cs" />
+     <Compile Include="Assets\Libraries\Presenter\Scripts\Com\Bit34Games\Unity\PresenterSceneManager.cs" />
      <Compile Include="Assets\Scripts\MyGame\Character\Commands\MoveCharacterCommand.cs" />
      <Compile Include="Assets\Scripts\MyGame\Character\Commands\SelectCharacterCommand.cs" />
      <Compile Include="Assets\Scripts\MyGame\Character\Context\CharacterContextBindings.cs" />
@@ -83,11 +78,11 @@
      <Compile Include="Assets\Scripts\MyGame\Character\Signals\MoveCharacterSignal.cs" />
      <Compile Include="Assets\Scripts\MyGame\Character\Signals\SelectCharacterSignal.cs" />
      <Compile Include="Assets\Scripts\MyGame\Character\Unity\CharacterComponent.cs" />
-     <Compile Include="Assets\Scripts\MyGame\Character\Unity\CharacterDetailView.cs" />
+     <Compile Include="Assets\Scripts\MyGame\Character\Unity\CharacterOverlayView.cs" />
      <Compile Include="Assets\Scripts\MyGame\Character\Unity\CharactersView.cs" />
-     <Compile Include="Assets\Scripts\MyGame\Character\Views\CharacterDetailMediator.cs" />
+     <Compile Include="Assets\Scripts\MyGame\Character\Views\CharacterOverlayMediator.cs" />
      <Compile Include="Assets\Scripts\MyGame\Character\Views\CharactersMediator.cs" />
-     <Compile Include="Assets\Scripts\MyGame\Character\Views\ICharacterDetailView.cs" />
+     <Compile Include="Assets\Scripts\MyGame\Character\Views\ICharacterOverlayView.cs" />
      <Compile Include="Assets\Scripts\MyGame\Character\Views\ICharactersView.cs" />
      <Compile Include="Assets\Scripts\MyGame\Character\Views\ICharactersViewListener.cs" />
      <Compile Include="Assets\Scripts\MyGame\Ground\Context\GroundContextBindings.cs" />
@@ -96,32 +91,39 @@
      <Compile Include="Assets\Scripts\MyGame\Ground\Views\IGroundView.cs" />
      <Compile Include="Assets\Scripts\MyGame\Ground\Views\IGroundViewListener.cs" />
      <Compile Include="Assets\Scripts\MyGame\Main\Commands\LoadDataCommand.cs" />
+     <Compile Include="Assets\Scripts\MyGame\Main\Constants\ResourceNames.cs" />
      <Compile Include="Assets\Scripts\MyGame\Main\Context\MainContext.cs" />
      <Compile Include="Assets\Scripts\MyGame\Main\Context\MainContextBindings.cs" />
      <Compile Include="Assets\Scripts\MyGame\Main\Signals\DataLoadedSignal.cs" />
      <Compile Include="Assets\Scripts\MyGame\Main\Signals\LoadDataSignal.cs" />
+     <Compile Include="Assets\Scripts\MyGame\Main\Unity\MainScreenView.cs" />
      <Compile Include="Assets\Scripts\MyGame\Main\Unity\ResourceRefs.cs" />
      <Compile Include="Assets\Scripts\MyGame\Main\Unity\SceneRefs.cs" />
+     <Compile Include="Assets\Scripts\MyGame\Main\Views\IMainScreenView.cs" />
+     <Compile Include="Assets\Scripts\MyGame\Main\Views\MainScreenMediator.cs" />
  <Reference Include="UnityEngine.Purchasing">
- <HintPath>/Users/oguzsan/Works/Bit34/Libraries/Director/Dev/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>/Users/oguzsan/Works/Bit34/Libraries/Director/Dev/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/oguzsan/Works/Bit34/Libraries/Director/Dev/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/Users/oguzsan/Works/Bit34/Libraries/Director/Dev/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/Users/oguzsan/Works/Bit34/Libraries/Director/Dev/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Bit34PackageManager">
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Library/ScriptAssemblies/Bit34PackageManager.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/oguzsan/Works/Bit34/Libraries/Director/Dev/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/Users/oguzsan/Works/Bit34/Libraries/Director/Dev/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2018.4.33f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -327,11 +329,17 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/Applications/Unity/Hub/Editor/2018.4.33f1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/Users/oguzsan/Works/Bit34/Libraries/Director/Dev/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ <Reference Include="Bit34-Director">
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Assets/Bit34/Packages/com.bit34games.director@1.1.0/Bit34-Director.dll</HintPath>
  </Reference>
- <Reference Include="Bit34-Injector">
- <HintPath>/Users/oguzsan/Works/Bit34/Libraries/Director/Dev/Library/PackageCache/com.bit34games.injector@7a35e4b4eb3e2321413cfd11adc54a25b04c9266/Bit34-Injector.dll</HintPath>
+ <Reference Include="Bit34-Injector-Unity">
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Assets/Bit34/Packages/com.bit34games.injector@2.0.0/Bit34-Injector-Unity.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/Users/oguzsan/Works/Bit34/Make/Libraries/Presenter/dev/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.1/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2018.4.33f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

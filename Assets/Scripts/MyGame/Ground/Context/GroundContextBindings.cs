@@ -8,7 +8,7 @@ namespace MyGame.Ground.Context
 {
     public static class GroundContextBindings
     {
-        public static void Initialize(InjectorContext injector, MediationBinder mediationBinder, SignalCommandBinder signalCommandBinder)
+        public static void AddBindings(InjectorContext injector, MediationBinder mediationBinder, SignalCommandBinder signalCommandBinder)
         {
             //  View-Mediator bindings
             mediationBinder.BindView<GroundView>()                      .ToMediator<GroundMediator>()           .As<IGroundView>();

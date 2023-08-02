@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Com.Bit34Games.Unity.Director;
+using Com.Bit34Games.Director.Unity;
 using MyGame.Character.Views;
 
 namespace MyGame.Character.Unity
 {
-    public class CharactersView : MonoBehaviourView, ICharactersView
+    public class CharactersView : DirectorUnityView, ICharactersView
     {
         //  MEMBERS
 #pragma warning disable 0649

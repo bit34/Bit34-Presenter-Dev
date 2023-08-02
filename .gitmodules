@@ -1,0 +1,3 @@
+[submodule "Assets/Libraries/Presenter"]
+	path = Assets/Libraries/Presenter
+	url = git@github.com:bit34/Bit34-Presenter.git
